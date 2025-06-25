@@ -1,16 +1,13 @@
 package com.example.userservice.service;
 
-import com.example.userservice.dto.LoginRequest;
+import com.example.userservice.dto.*;
 import com.example.userservice.entity.User;
 import com.example.userservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
-
-import javax.naming.AuthenticationException;
+import org.springframework.security.core.AuthenticationException;
 
 @Service
 @RequiredArgsConstructor
@@ -36,7 +33,7 @@ public class AuthService {
         User user = userRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        String token = jwtService.generateToken(user);
+        String token = jwtService.generateToken(user.getUsername());
         return new LoginResponse(token, user.getUsername());
     }
 }

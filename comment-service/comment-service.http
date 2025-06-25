@@ -1,0 +1,23 @@
+DELETE http://localhost:8083/api/comments/reset
+
+###
+
+### Создать комментарий и сохранить ID
+POST http://localhost:8083/api/comments
+Content-Type: application/json
+
+{
+  "taskId": 15,
+  "userId": 18,
+  "text": "Первый комментарий"
+}
+> {%
+    const comment = typeof response.body === 'string' ? JSON.parse(response.body) : response.body;
+    client.global.set("commentId", comment.id);
+%}
+
+###
+
+### Получить комментарий по ID
+GET http://localhost:8083/api/comments/{{commentId}}
+Accept: application/json

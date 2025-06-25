@@ -1,0 +1,24 @@
+DELETE http://localhost:8082/api/tasks/reset
+
+###
+
+### Создать задачу и сохранить ID
+POST http://localhost:8082/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Тестовая задача",
+  "description": "Описание задачи",
+  "status": "PENDING",
+  "userId": 18
+}
+> {%
+    const task = typeof response.body === 'string' ? JSON.parse(response.body) : response.body;
+    client.global.set("taskId", task.id);
+%}
+
+###
+
+### Получить задачу по ID
+GET http://localhost:8082/api/tasks/{{taskId}}
+Accept: application/json

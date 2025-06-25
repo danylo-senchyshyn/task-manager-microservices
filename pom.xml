@@ -6,14 +6,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
+    <artifactId>task-manager-microservices</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.4</version>
         <relativePath/>
     </parent>
 
+    <modules>
+        <module>user-service</module>
+        <module>task-service</module>
+        <module>comment-service</module>
+        <module>eureka-server</module>
+        <module>gateway-service</module>
+    </modules>
 
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -23,6 +35,12 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
+    </dependencyManagement>
+
+    <properties>
+        <java.version>17</java.version>
+        <spring-cloud.version>2022.0.3</spring-cloud.version>
+    </properties>
 
     <build>
         <plugins>
@@ -32,4 +50,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

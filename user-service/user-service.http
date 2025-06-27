@@ -17,3 +17,13 @@ Content-Type: application/json
 ###
 GET http://localhost:8081/api/users/{{userId}}
 Accept: application/json
+
+###
+
+POST http://localhost:8081/api/users/register
+Content-Type: application/json
+
+{
+  "email": "danilsencisin@gmail.com",
+  "password": "1234"
+}

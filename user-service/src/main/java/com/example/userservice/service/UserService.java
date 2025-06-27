@@ -41,7 +41,7 @@ public class UserService implements UserDetailsService {
         user.setUsername(request.getUsername());
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setRole(request.getRole());
+        user.setRole("USER");
 
         User savedUser = userRepository.save(user);
         return convertToDTO(savedUser);
@@ -135,4 +135,6 @@ public class UserService implements UserDetailsService {
     public void reset() {
         userRepository.deleteAll();
     }
+
+
 }

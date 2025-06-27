@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
@@ -41,5 +42,11 @@ public class UserController {
     public ResponseEntity<Void> reset() {
         userService.reset();
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        System.err.println("Test endpoint called");
+        return ResponseEntity.ok("User service is working");
     }
 }

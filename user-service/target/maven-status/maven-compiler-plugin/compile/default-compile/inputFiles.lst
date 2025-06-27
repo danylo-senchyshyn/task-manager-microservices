@@ -1,12 +1,14 @@
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/service/AuthService.java
-/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/repository/UserRepository.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/dto/RegisterRequest.java
-/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/UserServiceApplication.java
+/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/config/JwtAuthenticationFilter.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/controller/UserController.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/service/JwtService.java
-/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/service/UserService.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/dto/LoginResponse.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/dto/LoginRequest.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/config/SecurityConfig.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/controller/AuthController.java
 /Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/entity/User.java
+/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/repository/UserRepository.java
+/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/UserServiceApplication.java
+/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/dto/UserDTO.java
+/Users/admin/IdeaProjects/task-manager-microservices/user-service/src/main/java/com/example/userservice/service/UserService.java
